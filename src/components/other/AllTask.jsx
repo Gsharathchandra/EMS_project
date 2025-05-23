@@ -13,8 +13,8 @@ const AllTask = () => {
         <h5 className="w-1/5 ">Failed</h5>
       </div>
 <div className="">
-        {authData.employees.map(function(elem){
-        return <div className="border-emerald-500 border-2 mb-2 py-2 px-4 flex justify-between rounded">
+        {authData.employees.map(function(elem,idx){
+        return <div key={idx} className="border-emerald-500 border-2 mb-2 py-2 px-4 flex justify-between rounded">
         <h2 className="text-lg w-1/5 text-white">{elem.firstName}</h2>
         <h3 className="text-lg w-1/5  text-blue-400">{elem.taskCount.newTask}</h3>
         <h5 className="text-lg w-1/5 text-yellow-400">{elem.taskCount.active}</h5>
